@@ -2,7 +2,7 @@ import random as r
 import matplotlib.pyplot as plt
 
 
-class SpellingBeeContenstant():
+class SpellingBeeContestant:
     _knowledge = 0
 
     def __init__(self, percentage_knowledge):
@@ -19,13 +19,13 @@ def setup_spelling_bee(incrementation_bool : bool):
     players = []
     for i in range(0, 10):
         if incrementation_bool:
-            players.append(SpellingBeeContenstant(90 + i))
+            players.append(SpellingBeeContestant(90 + i))
         else :
-            players.append(SpellingBeeContenstant(99 - i))
+            players.append(SpellingBeeContestant(99 - i))
     return players
 
 
-def test_player(player : SpellingBeeContenstant):
+def test_player(player : SpellingBeeContestant):
     return player.get_knowledge() >= r.randint(1, 100)
 
 
@@ -55,5 +55,6 @@ def graph_wins(win_count_list : list):
     plt.ylabel('Win Share')
     plt.title('Win Share by incrementing order')
     plt.show()
+
 
 graph_wins(simulate_several_bees(10000, False))
