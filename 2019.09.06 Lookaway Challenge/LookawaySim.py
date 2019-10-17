@@ -34,5 +34,5 @@ def simManyLookaway(n):
     return player1_wins / games
 
 
-print(simManyLookaway(10000000))
+print(simManyLookaway(100000))
 
