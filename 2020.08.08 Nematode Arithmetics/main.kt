@@ -1,4 +1,3 @@
-import kotlin.math.exp
 import kotlin.random.Random
 
 class Solution(){
@@ -33,11 +32,6 @@ class Solution(){
         return out
     }
 }
-fun main(){
-    val s = Solution()
-    print(simulate(1,1,4,1000000))
-}
-
 fun simulate(x: Int = 0, y: Int = 0, exp:Int = 0, numberOfSimulations:Int): Float {
     val s = Solution()
     var res:Float = 0.0F
@@ -45,4 +39,9 @@ fun simulate(x: Int = 0, y: Int = 0, exp:Int = 0, numberOfSimulations:Int): Floa
         res += s.exponential(s.addition(x,y), exp)
     }
     return res/numberOfSimulations
+}
+
+fun main(){
+    val s = Solution()
+    print(simulate(1,1,4,10000))
 }
